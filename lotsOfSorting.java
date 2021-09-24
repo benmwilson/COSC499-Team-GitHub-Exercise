@@ -83,10 +83,23 @@ public class lotsOfSorting {
 		return a;
 
 	}
-
-	// method for third sorting algorithm
+  
+	// Random Sort
+	// Stops after 100 000 attempt
 	public static int[] randomSort(int[] a) {
 
+		int counter = 0;
+		
+		while(counter < 100000 && checkSequential(a) == false) {
+			a = shuffle(a);
+			counter++;
+		}
+		
+		if(counter == 100000) {
+			System.out.println("Trials exceeded 100 000");
+		}else {
+			System.out.println("Array sorted");
+		}
 		return a;
 
 	}
