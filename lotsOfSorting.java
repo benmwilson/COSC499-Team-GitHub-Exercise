@@ -75,7 +75,7 @@ public class lotsOfSorting {
 	}
 
 	// method for third sorting algorithm
-	public static int[] sort3(int[] a) {
+	public static int[] randomSort(int[] a) {
 
 		return a;
 
