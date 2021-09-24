@@ -62,41 +62,57 @@ public class lotsOfSorting {
 
 		int n = a.length;
 		int temp = 0;
-<<<<<<< HEAD
 		for(int i=0; i < n; i++) {
 			for (int j = 1; j < (n - i); j++) {
 				if (a[j - 1] > a[j]) {
 					//swap elements
-=======
-		for (int i = 0; i < n; i++) {
-			for (int j = 1; j < (n - i); j++) {
-				if (a[j - 1] > a[j]) {
-					// swap elements
->>>>>>> 26e7c83ef389f8bbe79303ae8d423dc793b222e2
 					temp = a[j - 1];
 					a[j - 1] = a[j];
 					a[j] = temp;
 				}
 
 			}
-<<<<<<< HEAD
-=======
-
->>>>>>> 26e7c83ef389f8bbe79303ae8d423dc793b222e2
 		}
 		return a;
 
 	}
 
+	// method for second sorting algorithm
 	public static int[] selectionSort(int[] a) {
+		int size = a.length;
+		
+		for (int x = 0; x < size - 1; x++) {
+			int lastSmallestPosition = x;
 
+			for (int y = x + 1; y < size; y++) {
+				if (a[x] > a[y] && a[y] <= a[lastSmallestPosition]) {
+					lastSmallestPosition = y;
+				}
+			}
+			int temp = a[lastSmallestPosition];
+			a[lastSmallestPosition] = a[x];
+			a[x] = temp;
+		}
 		return a;
 
 	}
-
-	// method for third sorting algorithm
+  
+	// Random Sort
+	// Stops after 100 000 attempt
 	public static int[] randomSort(int[] a) {
 
+		int counter = 0;
+		
+		while(counter < 100000 && checkSequential(a) == false) {
+			a = shuffle(a);
+			counter++;
+		}
+		
+		if(counter == 100000) {
+			System.out.println("Trials exceeded 100 000");
+		}else {
+			System.out.println("Array sorted");
+		}
 		return a;
 
 	}
