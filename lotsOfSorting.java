@@ -26,15 +26,15 @@ public class lotsOfSorting {
 	// method for second sorting algorithm
 	public static int[] sort2(int[] a) {
 		//bubblesort
-		int n = arr.length;
+		int n = a.length;
 		int temp = 0;
 		for(int i=0; i < n; i++){
 			for(int j=1; j < (n-i); j++){
-				if(arr[j-1] > arr[j]){
+				if(a[j-1] > a[j]){
 					//swap elements
-					temp = arr[j-1];
-					arr[j-1] = arr[j];
-					arr[j] = temp;
+					temp = a[j-1];
+					a[j-1] = a[j];
+					a[j] = temp;
 				}
 
 			}
