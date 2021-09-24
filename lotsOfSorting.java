@@ -6,15 +6,15 @@ public class lotsOfSorting {
 	
 	
 	public static void main(String[] args) {
-		
+
 		/*
 		 * To Do:
 		 * 1. Input a list of integers to be sorted
-		 * 2. Simple menu to decide which sorting alg to use on the list	
+		 * 2. Simple menu to decide which sorting alg to use on the list
 		 * 3. Returns sorted list and time to sort using the chosen sorting alg
 		 */
 
-
+	}
 	// method for first sorting algorithm
 	public static int[] sort1(int[] a) {
 
