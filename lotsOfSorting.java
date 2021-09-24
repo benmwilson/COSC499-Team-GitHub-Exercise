@@ -6,11 +6,11 @@ public class lotsOfSorting {
 	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		/*
 		 * To Do:
 		 * 1. Input a list of integers to be sorted
-		 * 2. Simple menu to decide which sorting alg to use on the list	
+		 * 2. Simple menu to decide which sorting alg to use on the list
 		 * 3. Returns sorted list and time to sort using the chosen sorting alg
 		 */
 
@@ -59,15 +59,26 @@ public class lotsOfSorting {
 		System.out.println("|					|");
 		System.out.println("|---------------------------------------|");
 	}
-
 	// method for first sorting algorithm
 	public static int[] bubbleSort(int[] a) {
+    //bubblesort
+		int n = a.length;
+		int temp = 0;
+		for(int i=0; i < n; i++){
+			for(int j=1; j < (n-i); j++){
+				if(a[j-1] > a[j]){
+					//swap elements
+					temp = a[j-1];
+					a[j-1] = a[j];
+					a[j] = temp;
+				}
+
+			}
 
 		return a;
 
 	}
-
-	// method for second sorting algorithm
+    
 	public static int[] selectionSort(int[] a) {
 
 		return a;
