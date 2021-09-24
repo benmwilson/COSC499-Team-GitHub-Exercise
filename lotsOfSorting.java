@@ -8,20 +8,18 @@ public class lotsOfSorting {
 	public static void main(String[] args) {
 
 		/*
-		 * To Do:
-		 * 1. Input a list of integers to be sorted
-		 * 2. Simple menu to decide which sorting alg to use on the list
-		 * 3. Returns sorted list and time to sort using the chosen sorting alg
+		 * To Do: 1. Input a list of integers to be sorted 2. Simple menu to decide
+		 * which sorting alg to use on the list 3. Returns sorted list and time to sort
+		 * using the chosen sorting alg
 		 */
 
 		boolean exit = false;
 		int input = 0;
-		int a[] = {5,3,4,1,2};
-		
+		int a[] = { 5, 3, 4, 1, 2 };
+
 		displayMenu();
-		
+
 		do {
-			
 
 			input = numberInput(0, 5);
 
@@ -39,7 +37,6 @@ public class lotsOfSorting {
 				a = selectionSort(a);
 			}
 		} while (exit == false);
-
 
 	}
 
@@ -59,26 +56,28 @@ public class lotsOfSorting {
 		System.out.println("|					|");
 		System.out.println("|---------------------------------------|");
 	}
+
 	// method for first sorting algorithm
 	public static int[] bubbleSort(int[] a) {
-    //bubblesort
+
 		int n = a.length;
 		int temp = 0;
-		for(int i=0; i < n; i++){
-			for(int j=1; j < (n-i); j++){
-				if(a[j-1] > a[j]){
-					//swap elements
-					temp = a[j-1];
-					a[j-1] = a[j];
+		for (int i = 0; i < n; i++) {
+			for (int j = 1; j < (n - i); j++) {
+				if (a[j - 1] > a[j]) {
+					// swap elements
+					temp = a[j - 1];
+					a[j - 1] = a[j];
 					a[j] = temp;
 				}
 
 			}
 
+		}
 		return a;
 
 	}
-    
+
 	public static int[] selectionSort(int[] a) {
 
 		return a;
@@ -92,10 +91,10 @@ public class lotsOfSorting {
 
 	}
 
-	//Display array function
+	// Display array function
 	public static void displayArray(int[] a) {
 		int size = a.length;
-		for(int x = 0; x < size; x++) {
+		for (int x = 0; x < size; x++) {
 			System.out.print(a[x] + "	");
 			if ((x + 1) % 5 == 0) {
 				System.out.println();
@@ -106,13 +105,13 @@ public class lotsOfSorting {
 		System.out.println();
 	}
 
-	//Random Number Generator
+	// Random Number Generator
 	public static int RNG(int min, int max) {
 		int random = (int) (Math.random() * (max - min + 1) + min);
 		return random;
 	}
 
-	//Number input with range
+	// Number input with range
 	public static int numberInput(int min, int max) {
 		boolean success = true;
 		int number = 0;
@@ -134,17 +133,17 @@ public class lotsOfSorting {
 		return number;
 	}
 
-	//Check if the array is in order
+	// Check if the array is in order
 	public static boolean checkSequential(int[] a) {
 		boolean sequential = true;
 		int size = a.length;
-		
+
 		for (int i = 0; i < size; i++) {
-			if(a[i] != i + 1) {
+			if (a[i] != i + 1) {
 				sequential = false;
-			}	
+			}
 		}
-		
+
 		return sequential;
 	}
 
@@ -167,7 +166,5 @@ public class lotsOfSorting {
 		}
 		return a;
 	}
-
-	
 
 }
